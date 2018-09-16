@@ -9,17 +9,17 @@ class App extends Component {
     //TODO make a call to our rails server to get Items
   }
 
-  addItem = (name) => {
+  addQuestion = (name) => {
     //TODO make api call to rails server to add item
     //TODO update state
   }
 
-  updateTodo = (id) => {
+  updateQuestion = (id) => {
     //TODO make api call to update todo
     //TODO update state
   }
 
-  deleteTodo = (id) => {
+  deleteQuestion = (id) => {
     //TODO make api call to delete todo
     //TODO remove it from state
   }
@@ -27,11 +27,11 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <TodoForm addItem={this.addItem} />
+        <TodoForm addItem={this.addQuestion} />
         <TodoList
-          todos={this.state.todos}
-          updateTodo={this.updateTodo}
-          deleteTodo={this.deleteTodo}
+          todos={this.state.questions}
+          updateTodo={this.updateQuestion}
+          deleteTodo={this.deleteQuestion}
         />
       </div>
     );
