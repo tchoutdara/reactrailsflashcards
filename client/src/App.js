@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
-import TodoForm from './components/Form';
-import TodoList from './components/List';
+import Form from './components/Form';
+import List from './components/List';
 
 class App extends Component {
-  state = { questions: [] }
+  state = { question: [], answer: [] }
 
   componentDidMount() {
-    //TODO make a call to our rails server to get Items
+    //make a call to our rails server to get Items
   }
 
   addQuestion = (name) => {
-    //TODO make api call to rails server to add item
-    //TODO update state
+    //make api call to rails server to add item
+    //Tupdate state
   }
 
   updateQuestion = (id) => {
-    //TODO make api call to update todo
-    //TODO update state
+    //make api call to update todo
+    //update state
   }
 
   deleteQuestion = (id) => {
-    //TODO make api call to delete todo
-    //TODO remove it from state
+    //make api call to delete todo
+    //remove it from state
   }
 
   render() {
     return (
       <div className="container">
-        <TodoForm addItem={this.addQuestion} />
-        <TodoList
-          todos={this.state.questions}
+        <Form addQuestion={this.addQuestion} />
+        <List
+          questions={this.state.questions}
           updateTodo={this.updateQuestion}
           deleteTodo={this.deleteQuestion}
         />

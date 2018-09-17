@@ -1,4 +1,5 @@
 import React from 'react';
+
 class Form extends React.Component {
     state = { question: '', answer: ''}
 
@@ -8,7 +9,7 @@ class Form extends React.Component {
     
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addQuest(this.state.question);
+        this.props.addQuestion(this.state.question);
         this.setState({ question: ''})
     }
 
@@ -18,7 +19,7 @@ class Form extends React.Component {
         <input
         placeholder="Add Question"
         required
-        value={this.state.name}
+        value={this.state.question}
         onChange={this.handleChange}
         />
         </form>
@@ -26,3 +27,4 @@ class Form extends React.Component {
     )
     }
 }
+export default Form;

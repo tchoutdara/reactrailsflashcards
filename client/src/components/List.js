@@ -1,5 +1,5 @@
 import React from 'react';
-import Answer from './Answer';
+import Form from './components/Form';
 
 const List = ({ questions, updateQuestion, deleteQuestion}) => (
     <div className="row">
@@ -7,7 +7,7 @@ const List = ({ questions, updateQuestion, deleteQuestion}) => (
     <question
     key={question.id}
     {...question}
-    updateQuestion={updateQuesation}
+    updateQuestion={updateQuestion}
     deleteQuestion={deleteQuestion}
     />
     )
