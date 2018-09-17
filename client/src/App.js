@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
-import List from './components/List';
+
 
 class App extends Component {
   state = { question: [], answer: [] }
@@ -24,15 +24,27 @@ class App extends Component {
     //remove it from state
   }
 
+  List = () => {
+    return this.state.questions.map(question => {
+      return (
+        <div className="row">
+          <Answer
+            {...question}
+            updateQuestion={this.updateQuestion}
+            deleteQUestion={this.deleteQuestion}
+          />
+        </div>
+      )
+    })
+  }
+
   render() {
     return (
-      <div className="container">
-        <Form addQuestion={this.addQuestion} />
-        <List
-          questions={this.state.questions}
-          updateTodo={this.updateQuestion}
-          deleteTodo={this.deleteQuestion}
-        />
+      <div>
+        <div>
+          <Form addQuestion={this.addQuestion} />
+          {this.List()}
+        </div>
       </div>
     );
   }
