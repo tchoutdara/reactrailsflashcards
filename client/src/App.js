@@ -3,7 +3,7 @@ import TodoForm from './components/Form';
 import TodoList from './components/List';
 
 class App extends Component {
-  state = { todos: [] }
+  state = { questions: [] }
 
   componentDidMount() {
     //TODO make a call to our rails server to get Items
